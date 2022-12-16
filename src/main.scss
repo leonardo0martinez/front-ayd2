@@ -1,0 +1,116 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: #F8F9FA;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.login{
+    position: absolute;
+    width: 30%;
+    margin-top: 310px;
+    margin-left: 68.8%;
+}
+
+#event-list span{
+    font-weight: normal;
+}
+
+#event-list{
+    border: 1px solid #F8F9FA;
+    background-color:#F8F9FA;
+}
+
+#event-list:hover{
+    border: 1px solid #DC3545;
+    background-color: antiquewhite;
+    color: black;
+    transition: 0.3s;
+}
+
+#brackets{
+    height: 560px;
+    max-width: 1116px;
+    background-image: url("https://ayd2g9.s3.us-east-2.amazonaws.com/fase.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+.match{
+    width: 115px;
+    height: 35px;
+    background-color: none;
+    position:absolute;
+    padding-top: 5px;
+}
+
+.match:hover{
+    // border: 1px solid #DC3545;
+    background-color: antiquewhite;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+$initial-top: 47px;
+.corner-top{
+    margin-top: $initial-top;
+}
+.corner-left{
+    margin-left: 46px;
+}
+.corner-right{
+    margin-left: 959px;
+}
+@for $i from 1 through 8 {
+    .octavos-#{$i}{
+        @if $i > 3 {
+            margin-top: $initial-top + (26px + 35px) * ($i - 1) + 2;
+        } @else {
+            margin-top: $initial-top + (26px + 35px) * ($i - 1);
+        }
+    }
+}
+
+
+$cuartos-top: 78px;
+.cuartos-left{
+    margin-left: 198px;
+}
+.cuartos-right{
+    margin-left: 808px;
+}
+@for $i from 1 through 4 {
+    .cuartos-#{$i}{
+        margin-top: $cuartos-top + (88px + 35px) * ($i - 1);
+    }
+}
+
+
+$semis-top: 138px;
+.semis-left{
+    margin-left: 350px;
+}
+.semis-right{
+    margin-left: 655px;
+}
+
+@for $i from 1 through 2{
+    .semis-#{$i}{
+        margin-top: $semis-top + (213px + 35px) * ($i - 1);
+    }
+}
+
+$final-top: 212px;
+.final-left{
+    margin-left: 503px;
+}
+
+@for $i from 1 through 2{
+    .final-#{$i}{
+        margin-top: $final-top + (67px + 35px) * ($i - 1);
+    }
+}
